@@ -1,29 +1,71 @@
-
 :root{
 
-    --background: #68233a;
-    --letra1:     #f2a38d;
-    --letra2:     #bb4e5d;
-    --section:    #f17779;
-    --button:     #863443;
+    --background: #0d052f;
+    --letra1:     #f8f6f1;
+    --letra2:     aqua;
+    --section:    #0e0429;
+    --button:     #f8f8f8;
+    --backgroundTransparent: #281b5f;
+    --icono: #f6f375;
 
+}
 
+/* Globales */
+
+h1,h2,h3{
+    text-align: center;
+    color: #fff;
 }
 
 html{
 
     font-size: 62.5%;
+    box-sizing: border-box;
     
 }
 
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 
 body{
     font-size: 16px;
-    background-color: var(--background);
+    background-image: linear-gradient(to top, var(--backgroundTransparent) 0%, var(--background)  100%); /* Degradado fondo */
     font-family: 'PT Serif', serif; 
    
 }
+
+.button{
+    background-color: #201266ae;
+    color: #fff;
+    padding: 1rem 3rem;
+    margin-top: 1 rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+}
+
+@media (min-width: 768px){
+    .button{
+        width: auto;
+
+    }
+}
+
+.shade{
+
+box-shadow: 0px 5px 21px 4px rgba(0,0,0,0.49);
+background-color: var(--section);
+padding: 2rem;
+border-radius: 1rem;
+}
+
+/* Font*/
 
 .titulo{
     text-align: center;
@@ -33,7 +75,7 @@ body{
 
 h1.titulo{
     
-    color: var(--letra1);
+    color: #fff;
     
    
 }
@@ -51,11 +93,18 @@ h2.titulo{
 
 h2.titulo span{
     font-size: 2rem;
-    color: var(--letra1);
+    color: #fff;
+}
+.origen{
+    color: #fff;
+}
+
+p{
+    color: #fff;
 }
 
 .contenedor{
-    width: 120rem;
+    max-width: 120rem;
     margin: 0 auto;
 }
 
@@ -65,24 +114,103 @@ h2.titulo span{
 
 .navegacion-principal{
 
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding: 15px;
+    
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    
+    align-items: center;
     
 }
+
+@media (min-width: 768px) {
+   
+    .navegacion-principal{
+
+       flex-direction: row;
+       justify-content: space-around;
+        
+    }
+
+
+}
+
 
 .navegacion-principal a{
     color: var(--button);
     text-decoration: none;
+    font-size: 2rem;
+    padding: 15px;
+    display: block;
+    text-align: center;
     
 }
 
 a:hover{
-    background-color: var(--letra1);
     opacity: 80%;
-    border-radius: 20%;
     transition: ease-in .4s;
   }
 
+  .hero{
+
+    background-image: url(../img/image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 410px;
+    padding: 20px;
+    position: relative;
+    margin-bottom: 2rem;
+   
+
+  }
+
+  .contenido-hero {
+    position: absolute;
+    background-color: rgb(0 0 0 / 70%); /** Otra opción **/
+    background-color: rgba(0, 0, 0, .7);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+@media (min-width: 768px){
+.services{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    text-align: center;
+}
+}
+
+.service{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service .icono{
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--icono);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.formulario label{
+color: #fff;
+}
+
+
+.formulario{
+    display: grid;
+    background-color: #0b0220;
+    text-align: center;
+    border-radius: 10%;
+}
