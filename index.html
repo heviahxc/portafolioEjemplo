@@ -98,44 +98,46 @@
 
   
     <h2>Contacto</h2>
-  <section class="formulario">
+  <section>
 
   
-    <form>
+    <form class="formulario">
         <fieldset>
             <legend>Contactános llenando los campos.</legend>
 
-            <div>
-            <label>Nombre</label>
-            <input type="text">
+            <div class="contenedor-campos">
+              <div class="campo">
+            <label>Nombre:</label>
+            <input class="input-text" type="text" placeholder="Tu nombre">
             </div>
 
-            <div>
-            <label>Teléfono</label>
-            <input type="tel" placeholder="Tu teléfono">
+            <div class="campo">
+            <label>Teléfono:</label>
+            <input class="input-text" type="tel" placeholder="Tu teléfono">
             </div>
 
-            <div>>
-            <label>Correo</label>
-            <input type="email" placeholder="Tu email">
+            <div class="campo">
+            <label>Correo:</label>
+            <input class="input-text" type="email" placeholder="Tu email">
             </div>
 
-            <div>
-            <label>Mensaje</label>
-            <textarea></textarea>
+            <div class="campo">
+            <label>Mensaje:</label>
+            <textarea class="input-text"></textarea>
             </div>
-
-            <div>
-            <button type="submit" value="Enviar">Enviar</button>
+          </div> <!-- campos -->
+            <div class="align-right flex">
+            <button class="button w-sm-100" type="submit" value="Enviar">Enviar</button>
             </div>
+         
         </fieldset>
 
 
     </form>
   </section>
 </main>
-  <footer>
-    <p>Todos los derechos reservados</p>
+  <footer class="footer">
+    <p>Todos los derechos reservados. Felipe Hevia Freelancer</p>
   </footer>
     
 </body>
