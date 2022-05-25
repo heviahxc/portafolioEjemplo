@@ -80,7 +80,7 @@ border-radius: 1rem;
 }
 
 h1.titulo{
-    
+   
     color: #fff;
     
    
@@ -89,9 +89,30 @@ h1.titulo{
 h1.titulo span{
     
     color: var(--letra2);
-    
-   
+
+
+ /* 
+    ANIMACION
+ 
+    display: inline-block;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 12ch;
+
+    animation: typing 2s steps(10),
+    blink .5s infinite step-end alternate;
+    overflow: hidden;
+   */
 }
+/* ANIMACION
+@keyframes typing{
+    from {width: 0}
+}
+
+@keyframes blink{
+    50% {border-color: transparent}
+}
+*/
 
 h2.titulo{
     color: var(--letra2);
@@ -151,9 +172,13 @@ p{
     
 }
 
+
+
 a:hover{
     opacity: 80%;
     transition: ease-in .4s;
+    color: #180d47;
+    background-color: rgb(62, 100, 154);
   }
 
   .hero{
@@ -293,3 +318,5 @@ justify-content: flex-end;
 .footer{
     text-align: center;
 }
+
+
